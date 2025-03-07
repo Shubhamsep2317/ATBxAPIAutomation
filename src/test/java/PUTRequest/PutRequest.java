@@ -15,18 +15,18 @@ public class PutRequest {
     @Test
     public void restfullBooker_PUTRequest(){
 
-        String cookie="db7ce2a3c0fe094";
-        String ID="3348";
+        final String TOKEN="Basic YWRtaW46cGFzc3dvcmQxMjM=";
+        String ID="711";
         String payload="{\n" +
                 "    \"firstname\" : \"James\",\n" +
-                "    \"lastname\" : \"ABC\",\n" +
+                "    \"lastname\" : \"Hey\",\n" +
                 "    \"totalprice\" : 1110,\n" +
                 "    \"depositpaid\" : true,\n" +
                 "    \"bookingdates\" : {\n" +
                 "        \"checkin\" : \"2018-01-01\",\n" +
                 "        \"checkout\" : \"2019-01-01\"\n" +
                 "    },\n" +
-                "    \"additionalneeds\" : \"Breakfast\"\n" +
+                "    \"additionalneeds\" : \"Bf\"\n" +
                 "}";
 
         r.given();
@@ -34,7 +34,8 @@ public class PutRequest {
         r.basePath("/booking/"+ID);
         r.contentType(ContentType.JSON);
         r.accept("application/json");
-        // Missing part if code for Auth --->> Need to check
+        r.header("Authorization",TOKEN);
+        //r.header("Accept", "application/json");
         r.body(payload).log().all();
         r.when().log().all().put();
         r.then().log().all().statusCode(200);
