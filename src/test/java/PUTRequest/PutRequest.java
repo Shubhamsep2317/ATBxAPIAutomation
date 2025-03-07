@@ -18,7 +18,7 @@ public class PutRequest {
         final String TOKEN="Basic YWRtaW46cGFzc3dvcmQxMjM=";
         String ID="711";
         String payload="{\n" +
-                "    \"firstname\" : \"James\",\n" +
+                "    \"firstname\" : \"Hey\",\n" +
                 "    \"lastname\" : \"Hey\",\n" +
                 "    \"totalprice\" : 1110,\n" +
                 "    \"depositpaid\" : true,\n" +
