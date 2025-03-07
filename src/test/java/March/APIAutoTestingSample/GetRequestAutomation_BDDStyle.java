@@ -3,7 +3,7 @@ package March.APIAutoTestingSample;
 import io.restassured.RestAssured;
 
 
-public class GetRequestAutomation {
+public class GetRequestAutomation_BDDStyle {
 
     public static void main(String[] args) {
 
