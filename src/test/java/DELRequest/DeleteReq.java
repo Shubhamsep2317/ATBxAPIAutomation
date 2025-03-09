@@ -37,6 +37,5 @@ public class DeleteReq {
         validatableResponse= res.then().log().all();
         validatableResponse.statusCode(201);
 
-
     }
 }
