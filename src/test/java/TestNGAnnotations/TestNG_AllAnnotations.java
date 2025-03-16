@@ -10,8 +10,7 @@ public class TestNG_AllAnnotations {
     }
 
     @BeforeTest
-    public void beforeTest(){
-        System.out.println("Before Test");
+    public void beforeTest(){ System.out.println("Before Test");
     }
 
     @BeforeClass
