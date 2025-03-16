@@ -1,34 +1,52 @@
 package TestNGAnnotations;
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class TestNG_AllAnnotations {
-    // PUT action
-    //1.get Token
-    //2. get BookingID
-    //3. Perform PUT
-    //4. Close all things
 
-    @BeforeTest
-    public void getToken(){
-        System.out.println("1");
+    @BeforeSuite
+    public void beforeSuiteMethod(){
+        System.out.println("Before Suite");
+    }
+
+    @BeforeClass
+    public void beforeClassMethod(){
+        System.out.println("Before Class");
+    }
+
+    @BeforeMethod
+    public void beforeMethod(){
+        System.out.println("Before Method");
     }
 
     @BeforeTest
-    public void getBookingID(){
-        System.out.println("2");
+    public void beforeTest(){
+        System.out.println("Before Test");
     }
 
     @Test
-    public void test_Put(){
-        System.out.println("3");
+    public void testMethod(){
+        System.out.println("Test case");
+    }
+
+    @AfterMethod
+    public void afterMethod(){
+        System.out.println("After Method");
     }
 
     @AfterTest
-    public void close_All(){
-        System.out.println("4");
+    public void afterTest(){
+        System.out.println("After Test");
+    }
+
+    @AfterClass
+    public void afterClassMethod(){
+        System.out.println("After Class");
+    }
+
+    @AfterSuite
+    public void afterSuiteMethod(){
+        System.out.println("After Suite");
     }
 
 
