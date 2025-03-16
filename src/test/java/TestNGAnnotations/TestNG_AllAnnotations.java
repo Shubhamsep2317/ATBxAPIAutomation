@@ -9,6 +9,11 @@ public class TestNG_AllAnnotations {
         System.out.println("Before Suite");
     }
 
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("Before Test");
+    }
+
     @BeforeClass
     public void beforeClassMethod(){
         System.out.println("Before Class");
@@ -19,10 +24,6 @@ public class TestNG_AllAnnotations {
         System.out.println("Before Method");
     }
 
-    @BeforeTest
-    public void beforeTest(){
-        System.out.println("Before Test");
-    }
 
     @Test
     public void testMethod(){
@@ -34,14 +35,14 @@ public class TestNG_AllAnnotations {
         System.out.println("After Method");
     }
 
-    @AfterTest
-    public void afterTest(){
-        System.out.println("After Test");
-    }
-
     @AfterClass
     public void afterClassMethod(){
         System.out.println("After Class");
+    }
+
+    @AfterTest
+    public void afterTest(){
+        System.out.println("After Test");
     }
 
     @AfterSuite
