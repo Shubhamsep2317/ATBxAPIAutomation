@@ -88,6 +88,7 @@ public class RestAssuredGson {
 
         // Case -3--->>>>De-serialization Concept (Extracting Response values)
         // Create a POJO class for BookingResponse and map the response
+        // Server will give me JSON string so we are converting it to Java Objects using De-serialization
         String jsonResponse= response.asString();
         BookingResponse bookingResponse=gson.fromJson(jsonResponse, BookingResponse.class);
         System.out.println(bookingResponse.getBookingid());
