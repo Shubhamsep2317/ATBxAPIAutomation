@@ -1,5 +1,5 @@
 package AssertionsAPITesting;
-// For AssertJ assertions please import below line
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+// For AssertJ assertions please import below line
 import static org.assertj.core.api.Assertions.*;
 
 public class RestAssured_AssertJ {
