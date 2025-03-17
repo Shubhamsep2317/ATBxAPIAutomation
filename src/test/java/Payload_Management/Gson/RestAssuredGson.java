@@ -76,17 +76,29 @@ public class RestAssuredGson {
         // Case 2->> To extract response values we can use -->>JsonPath class
         // getString()-->> Method to be used
         // Use jsonpathFinder to get path -->> https://jsonpathfinder.com/
-
         JsonPath json=new JsonPath(response.asString());
         String firstName1= json.getString("booking.firstname");
         String bookingID=json.getString("bookingid");
         String checkinDate=json.getString("booking.bookingdates.checkin");
 
+        // AssertJ assertions
         assertThat(bookingID).isNotNull().isNotBlank();
-        assertThat(firstName1).isEqualTo("Shubhams");
+        assertThat(firstName1).isEqualTo("Shubham");
         assertThat(checkinDate).isNotNull();
 
         // Case -3--->>>>De-serialization Concept (Extracting Response values)
+        // Create a POJO class for BookingResponse and map the response
+        String jsonResponse= response.asString();
+        BookingResponse bookingResponse=gson.fromJson(jsonResponse, BookingResponse.class);
+        System.out.println(bookingResponse.getBookingid());
+        System.out.println(bookingResponse.getBooking().getFirstname());
+        System.out.println(bookingResponse.getBooking().getLastname());
+        System.out.println(bookingResponse.getBooking().getBookingdates().getCheckin());
+
+        // AssertJ assertions
+        assertThat(bookingResponse.getBooking().getFirstname()).isNotNull().isEqualTo("Shubham");
+        assertThat(bookingResponse.getBooking().getDepositpaid()).isEqualTo(false);
+
 
 
 
