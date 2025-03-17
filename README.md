@@ -10,7 +10,7 @@ Welcome to **AutomationBatchATB10x**, a **Java-based API automation framework** 
 |------------------------|------------------------------------|
 | **API Testing**       | Rest Assured                      |
 | **Logging**           | Log4j                              |
-| **HTML Reporting**    | Allure, Extent Reports            |
+| **HTML Reporting**    | Allure            |
 | **Assertions**        | Rest Assured, AssertJ, TestNG      |
 | **Test Case Management** | TestNG                         |
 | **JSON Schema Validation** | Rest Assured                |
