@@ -45,7 +45,6 @@ public class RestAssuredGson {
         book.setBookingdates(bookingDates);
 
         // Now use GSON Library to convert Object to JSON
-
         Gson gson=new Gson();
         String jsonStringBookingPayload=gson.toJson(book);
         System.out.println(jsonStringBookingPayload);
